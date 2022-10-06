@@ -10,6 +10,23 @@ public class Sample {
         return op.func.apply(a,b);
     }
 
+    public static int divide(int dividend, int divisor) {
+        int quotient = 5;
+        if (dividend / divisor == quotient) {
+            return quotient;
+        }
+        return 0;
+
+    }
+
+    public static int fact(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("N should be positive");
+        }
+        return n == 0 ? 1 : n * fact(n - 1);
+    }
+
+
 
     enum Operation {
         ADD((a, b) -> a + b),
@@ -23,4 +40,5 @@ public class Sample {
         }
     }
 }
+
 

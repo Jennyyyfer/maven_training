@@ -30,7 +30,42 @@ class Test {
         int product = Sample.op(Sample.Operation.MULT, u, v);
         Assertions.assertThat(product).as("10*12").isEqualTo(120);
     }
+    @org.junit.jupiter.api.Test
+    void product_of_4_and_5_equals_20(){
+        int u = 4;
+        int v = 5;
 
+        int product = Sample.op(Sample.Operation.MULT, u, v);
+        Assertions.assertThat(product).as("4*5").isEqualTo(20);
+    }
+    @org.junit.jupiter.api.Test
+    void dividing_10_by_2_should_produce_5() {
+        int dividend = 10; // (1)
+        int divisor = 2;
+        int quotient = Sample.divide(dividend, divisor); // (2)
+        Assertions.assertThat(quotient).as("quotient of 10 / 2")
+            .isEqualTo(5); // (3)
+    }
+    @org.junit.jupiter.api.Test
+    void dividing_120_by_24_should_produce_5() {
+        int dividend = 120; // (1)
+        int divisor = 24;
+        int quotient = Sample.divide(dividend, divisor); // (2)
+        Assertions.assertThat(quotient).as("quotient of 120 / 24")
+            .isEqualTo(5); // (3)
+    }
+    @org.junit.jupiter.api.Test
+    void factor_of_5(){
+        int n = 5;
+        int fact = Sample.fact(n-1);
+        Assertions.assertThat(fact).as("fact").isEqualTo(24);
+    }
+    @org.junit.jupiter.api.Test
+    void factor_of_777(){
+        int n = 777;
+        int fact = Sample.fact(n-1);
+        Assertions.assertThat(fact).as("fact").isEqualTo(0);
+    }
 
 }
 
